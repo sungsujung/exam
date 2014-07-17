@@ -247,6 +247,11 @@ public class UIButton : UIButtonColor
 			current = this;
 			EventDelegate.Execute(onClick);
 			current = null;
+
+			if(gameObject.transform.tag.Equals("startButton"))
+			{
+				Application.LoadLevel("Scene1");
+			}
 		}
 	}
 
